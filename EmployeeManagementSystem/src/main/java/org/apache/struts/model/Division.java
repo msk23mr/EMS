@@ -1,6 +1,6 @@
 package org.apache.struts.model;
 
-public class Division {
+public class Division implements Model {
 	/**************************************************
 	 * 変数の宣言
 	 **************************************************/
@@ -26,7 +26,7 @@ public class Division {
 
 	/**
 	 * 所属IDのゲッタ
-	 * 
+	 *
 	 * @return String型
 	 */
 	public String getId() {
@@ -35,7 +35,7 @@ public class Division {
 
 	/**
 	 * 所属IDのセッタ
-	 * 
+	 *
 	 * @param id
 	 */
 	public void setId(String id) {
@@ -44,7 +44,7 @@ public class Division {
 
 	/**
 	 * 所属名のゲッタ
-	 * 
+	 *
 	 * @return String型
 	 */
 	public String getName() {
@@ -53,7 +53,7 @@ public class Division {
 
 	/**
 	 * 所属名のセッタ
-	 * 
+	 *
 	 * @param name
 	 */
 	public void setName(String name) {
@@ -62,7 +62,7 @@ public class Division {
 
 	/**
 	 * 所在地のゲッタ
-	 * 
+	 *
 	 * @return String型
 	 */
 	public String getLocation() {
@@ -71,7 +71,7 @@ public class Division {
 
 	/**
 	 * 所在地のセッタ
-	 * 
+	 *
 	 * @param location
 	 */
 	public void setLocation(String location) {

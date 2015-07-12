@@ -2,7 +2,7 @@ package org.apache.struts.model;
 
 import java.sql.Date;
 
-public class Employee {
+public class Employee implements Model {
 	/****************************************************
 	 * 変数の宣言
 	 ****************************************************/

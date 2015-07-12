@@ -1,6 +1,6 @@
 package org.apache.struts.model;
 
-public class Prefecture {
+public class Prefecture implements Model {
 	/***************************************************
 	 * 変数の宣言
 	 ***************************************************/
@@ -23,7 +23,7 @@ public class Prefecture {
 
 	/**
 	 * 都道府県IDのゲッタ
-	 * 
+	 *
 	 * @return String型
 	 */
 	public String getId() {
@@ -32,7 +32,7 @@ public class Prefecture {
 
 	/**
 	 * 都道府県IDのセッタ
-	 * 
+	 *
 	 * @param id
 	 */
 	public void setId(String id) {
@@ -41,7 +41,7 @@ public class Prefecture {
 
 	/**
 	 * 都道府県名のゲッタ
-	 * 
+	 *
 	 * @return String型
 	 */
 	public String getName() {
@@ -50,7 +50,7 @@ public class Prefecture {
 
 	/**
 	 * 都道府県名のセッタ
-	 * 
+	 *
 	 * @param name
 	 */
 	public void setName(String name) {
