@@ -16,6 +16,11 @@ public class LoginAction extends AbstractAction {
 		return SUCCESS;
 	}
 
+	@Override
+	public String input() throws Exception {
+		return INPUT;
+	}
+
 	public Employee getEmployeeBean() {
 		return employeeBean;
 	}

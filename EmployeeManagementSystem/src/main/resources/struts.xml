@@ -7,14 +7,15 @@
 	<constant name="struts.devMode" value="true"></constant>
 	<package name="emp_manage_sys" extends="struts-default">
 
-		<action name="index">
-			<result>/login.jsp</result>
+		<action name="index" class="org.apache.struts.action.LoginAction"
+			method="input">
+			<result name="input">/login.jsp</result>
 		</action>
 
 		<action name="login" class="org.apache.struts.action.LoginAction"
 			method="execute">
-		<result name="success">/index.jsp</result>
-		<result name="input">/login.jsp</result>
+			<result name="success">/home.jsp</result>
+			<result name="input">/login.jsp</result>
 		</action>
 
 	</package>
