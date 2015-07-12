@@ -9,5 +9,10 @@
 </head>
 <body>
 <h2>ホーム画面</h2>
+
+<s:form action="logout">
+	<s:submit key="submit"></s:submit>
+</s:form>
+
 </body>
 </html>

@@ -2,24 +2,13 @@ package org.apache.struts.action;
 
 import org.apache.struts.model.Employee;
 
-public class LoginAction extends AbstractAction {
-
+public class LogoutAction extends AbstractAction {
 	private Employee employeeBean;
 
 	@Override
 	public String execute() throws Exception {
-
-		addAuthId();
-
+		removeAuthId();
 		return SUCCESS;
-	}
-
-	@Override
-	public String input() throws Exception {
-		if (checkLogin()) {
-			return AUTH;
-		}
-		return INPUT;
 	}
 
 	public Employee getEmployeeBean() {

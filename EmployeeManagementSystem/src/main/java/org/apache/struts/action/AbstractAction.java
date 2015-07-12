@@ -1,7 +1,9 @@
 package org.apache.struts.action;
 
 import java.util.Map;
+import java.util.Objects;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,9 +20,38 @@ public abstract class AbstractAction extends ActionSupport implements
 	private HttpServletRequest request;
 	private Map<String, Object> session;
 
+	private Cookie cookies[];
+	public static final String AUTH = "auth";
+
 	protected boolean checkLogin() {
 
-		return true;
+		if (!Objects.equals(session.get("AuthId"), null)) {
+
+			cookies = request.getCookies();
+
+			for (int i = 0; i < cookies.length; i++) {
+
+				if (Objects.equals(cookies[i].getName(), "AuthId")) {
+
+					if (Objects.equals(session.get("AuthId"),
+							cookies[i].getValue())) {
+						return true;
+					}
+				}
+			}
+		}
+
+		return false;
+	}
+
+	protected void addAuthId() {
+		String authId = "1234";
+		response.addCookie(new Cookie("AuthId", authId));
+		session.put("AuthId", authId);
+	}
+
+	protected void removeAuthId() {
+		session.remove("AuthId");
 	}
 
 	@Override
