@@ -120,6 +120,7 @@ public class DatabaseAccess {
 			rs = stat.executeQuery(sql);
 		} catch (SQLException e) {
 			System.out.println("SQLの実行に失敗");
+			System.out.println("SQL : " + sql);
 		}
 
 		// 実行結果を返す
@@ -146,6 +147,7 @@ public class DatabaseAccess {
 			return stat.executeUpdate(sql);
 		} catch (SQLException e) {
 			System.out.println("SQLの実行に失敗");
+			System.out.println("SQL : " + sql);
 			return -1;
 		}
 	}
